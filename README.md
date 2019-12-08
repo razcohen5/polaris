@@ -6,7 +6,7 @@
 
 Easily get started and create your own data service using polaris libraries! 
 
-This project demonstrates how to add queries, types & resolvers using ```PolarisServer``` .
+This project demonstrates how to add queries, types & resolvers using ``PolarisServer`` .
 
 ## Installation
 
@@ -23,4 +23,4 @@ npm install
 npm start
 ```
 
-The server will run on port 8082. You can change this by editing polaris-properties file.
+The server will run on port 8082. You can change this by editing ``polaris-properties`` file.
