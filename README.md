@@ -2,8 +2,6 @@
 
 # polaris-seed
 
-### Overview
-
 Easily get started and create your own data service using polaris libraries! 
 
 This project demonstrates how to add queries, types & resolvers using ``PolarisServer`` .
