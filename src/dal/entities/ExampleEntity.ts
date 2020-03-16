@@ -1,4 +1,4 @@
-import {Column, Entity, CommonModel} from "@enigmatis/polaris-core";
+import {PrimaryGeneratedColumn, Column, Entity, CommonModel} from "@enigmatis/polaris-core";
 
 @Entity()
 export class ExampleEntity extends CommonModel{
@@ -7,6 +7,13 @@ export class ExampleEntity extends CommonModel{
         this.exampleField = exampleField;
     }
 
+    @PrimaryGeneratedColumn()
+    protected id!: string;
+
     @Column()
     exampleField: string;
+
+    public getId(): string{
+        return this.id;
+    }
 }
