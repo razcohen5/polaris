@@ -10,12 +10,9 @@
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
-    "typeRoots": [
-      "src/type-declarations"
-    ],
-    "types": [
-      "node"
-    ],
+    "skipLibCheck": true,
+    "typeRoots": [],
+    "types": [],
     "declaration": true,
     "lib": [
       "es6",

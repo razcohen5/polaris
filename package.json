@@ -23,8 +23,8 @@
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
-    "@types/node": "^12.12.30",
-    "@types/node-fetch": "^2.5.5",
-    "typescript": "^3.8.3"
+    "@types/node": "^12.12.26",
+    "@types/node-fetch": "^2.5.4",
+    "typescript": "^3.7.5"
   }
 }
