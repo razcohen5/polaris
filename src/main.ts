@@ -1,8 +1,8 @@
-import {PolarisServer, ApplicationProperties} from '@enigmatis/polaris-core';
+import {PolarisServer, ApplicationProperties, LoggerConfiguration} from '@enigmatis/polaris-core';
 import {typeDefs} from './graphql/schema/type-defs';
 import {resolvers} from './graphql/resolvers/resolvers';
-import * as polarisProperties from '../polaris-properties.json';
-import {logger} from "./utils/logger";
+import * as polarisProperties from '../resources/polaris-properties.json';
+import {loggerConfiguration} from "./utils/logger";
 import {initConnection} from "./dal/create-connection";
 import {initalizeDatabase} from "./dal/init-db";
 
@@ -16,7 +16,7 @@ const server = new PolarisServer({
     resolvers,
     port: polarisProperties.port,
     applicationProperties,
-    logger
+    logger: loggerConfiguration as LoggerConfiguration
 });
 
 let startApp = async () => {

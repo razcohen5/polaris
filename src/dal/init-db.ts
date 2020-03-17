@@ -1,4 +1,4 @@
-import {getConnectionManager, PolarisSaveOptions, PolarisGraphQLContext } from "@enigmatis/polaris-core";
+import {getPolarisConnectionManager} from "@enigmatis/polaris-core";
 import {ExampleEntity} from "./entities/ExampleEntity";
 
 export const entities: ExampleEntity[] = [
@@ -9,5 +9,5 @@ export const entities: ExampleEntity[] = [
 ];
 
 export const initalizeDatabase = async () => {
-    await getConnectionManager().get().getRepository(ExampleEntity).save(new PolarisSaveOptions(entities[0], {} as PolarisGraphQLContext) as any);
+    await getPolarisConnectionManager().get().getRepository(ExampleEntity).save({} as any, entities);
 };

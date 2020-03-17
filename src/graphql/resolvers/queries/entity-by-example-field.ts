@@ -1,10 +1,9 @@
 import {ExampleEntity} from "../../../dal/entities/ExampleEntity";
 import {
-    getConnectionManager,
+    getPolarisConnectionManager,
     PolarisGraphQLContext,
-    PolarisFindOneOptions
 } from "@enigmatis/polaris-core";
 
 export const entityByExampleField = async (parent: any, {exampleFieldToFindBy}: any, context: PolarisGraphQLContext): Promise<ExampleEntity | undefined> => {
-    return getConnectionManager().get().getRepository(ExampleEntity).findOne(new PolarisFindOneOptions({where: {exampleField: exampleFieldToFindBy}}, context) as any);
+    return getPolarisConnectionManager().get().getRepository(ExampleEntity).findOne(context, {where: {exampleField: exampleFieldToFindBy}});
 };
