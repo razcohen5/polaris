@@ -1,4 +1,4 @@
-![Small Logo](static/img/polaris-logo.png)
+![Small Logo](static/img/polariscoolsm.png)
 
 # polaris-seed
 
