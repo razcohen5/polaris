@@ -2,13 +2,13 @@ import {createPolarisConnection, ConnectionOptions} from "@enigmatis/polaris-cor
 import {logger} from "../utils/logger";
 
 let connectionOptions: ConnectionOptions = {
-    type: "sqlite",
-    "database": ":memory:",
-    entities: [
-        __dirname + '/entities/*.{ts,js}',
-    ],
+    type: "postgres",
+    url: process.env.CONNECTION_STRING || '',
+    entities: [__dirname + '/entities/*.{ts,js}'],
     synchronize: true,
-    logging: true
+    logging: true,
+    schema: "seed",
+    dropSchema: true
 };
 
 export const initConnection = async () =>{

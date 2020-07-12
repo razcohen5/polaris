@@ -8,6 +8,6 @@ export const entities: ExampleEntity[] = [
   new ExampleEntity('Test4'),
 ];
 
-export const initalizeDatabase = async () => {
+export const initializeDatabase = async () => {
     await getPolarisConnectionManager().get().getRepository(ExampleEntity).save({} as any, entities);
 };

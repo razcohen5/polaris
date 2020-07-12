@@ -4,7 +4,7 @@ import {resolvers} from './graphql/resolvers/resolvers';
 import * as polarisProperties from '../resources/polaris-properties.json';
 import {loggerConfiguration} from "./utils/logger";
 import {initConnection} from "./dal/create-connection";
-import {initalizeDatabase} from "./dal/init-db";
+import {initializeDatabase} from "./dal/init-db";
 
 export const applicationProperties: ApplicationProperties = {
     ...polarisProperties,
@@ -21,7 +21,7 @@ const server = new PolarisServer({
 
 let startApp = async () => {
     await initConnection();
-    await initalizeDatabase();
+    await initializeDatabase();
     await server.start();
 };
 
