@@ -3,11 +3,11 @@ import {logger} from "../utils/logger";
 
 let connectionOptions: ConnectionOptions = {
     type: "postgres",
-    url: process.env.CONNECTION_STRING || '',
+    url: "postgres://ivmnscwr:ojKegCvYByiop1m-jStz96IlKPV7XCju@balarama.db.elephantsql.com:5432/ivmnscwr",
     entities: [__dirname + '/entities/*.{ts,js}'],
     synchronize: true,
     logging: true,
-    schema: "seed",
+    schema: "myschema",
     dropSchema: true
 };
 
